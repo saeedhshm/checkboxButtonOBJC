@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CheckboxButton.h"
 
 @interface ViewController ()
 
@@ -23,6 +24,9 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)checkAction:(CheckboxButton *)sender {
+    NSLog(@"the button is checked %i",sender.isChecked);
 }
 
 

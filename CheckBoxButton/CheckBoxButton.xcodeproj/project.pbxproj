@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F529B0232004E22A009EF737 /* CheckboxButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F529B0222004E22A009EF737 /* CheckboxButton.m */; };
 		F55E2D192004DFEF00DF81C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F55E2D182004DFEF00DF81C6 /* AppDelegate.m */; };
 		F55E2D1C2004DFEF00DF81C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55E2D1B2004DFEF00DF81C6 /* ViewController.m */; };
 		F55E2D1F2004DFEF00DF81C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55E2D1D2004DFEF00DF81C6 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F529B0212004E22A009EF737 /* CheckboxButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckboxButton.h; sourceTree = "<group>"; };
+		F529B0222004E22A009EF737 /* CheckboxButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckboxButton.m; sourceTree = "<group>"; };
 		F55E2D142004DFEF00DF81C6 /* CheckBoxButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckBoxButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55E2D172004DFEF00DF81C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F55E2D182004DFEF00DF81C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				F55E2D222004DFEF00DF81C6 /* LaunchScreen.storyboard */,
 				F55E2D252004DFEF00DF81C6 /* Info.plist */,
 				F55E2D262004DFEF00DF81C6 /* main.m */,
+				F529B0212004E22A009EF737 /* CheckboxButton.h */,
+				F529B0222004E22A009EF737 /* CheckboxButton.m */,
 			);
 			path = CheckBoxButton;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 			files = (
 				F55E2D1C2004DFEF00DF81C6 /* ViewController.m in Sources */,
 				F55E2D272004DFEF00DF81C6 /* main.m in Sources */,
+				F529B0232004E22A009EF737 /* CheckboxButton.m in Sources */,
 				F55E2D192004DFEF00DF81C6 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
