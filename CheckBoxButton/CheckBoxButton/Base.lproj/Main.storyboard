@@ -24,6 +24,7 @@
                                     <constraint firstAttribute="width" constant="30" id="3YN-gA-ffr"/>
                                     <constraint firstAttribute="height" constant="30" id="6RE-51-Lsl"/>
                                 </constraints>
+                                <color key="tintColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="checkAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Poi-2Z-o1K"/>
                                 </connections>

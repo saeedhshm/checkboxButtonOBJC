@@ -30,7 +30,6 @@
 
 -(void)checkAction:(UIButton *)sender{
     self.isChecked = !self.isChecked;
-     [self setBackgroundColor:UIColor.whiteColor];
     if(self.isChecked){
       [self setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
         [self.layer setBorderWidth:2];
