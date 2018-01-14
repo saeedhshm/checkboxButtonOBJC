@@ -10,4 +10,7 @@
 
 @interface CheckboxButton : UIButton
 @property (nonatomic) BOOL isChecked;
+@property (nonatomic,strong)IBInspectable UIColor *borderColor;
+@property (nonatomic,strong)IBInspectable UIColor *checkedColor;
+@property (nonatomic,strong) UIColor *arrowColor;
 @end

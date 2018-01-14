@@ -10,37 +10,73 @@
 
 @implementation CheckboxButton
 {
-    UIImage * img;
+    CGContextRef contextX;
+    CGContextRef contextY;
 }
 
+
+- (void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
+    [self setCheckSymbol:self.arrowColor];
+    
+}
 -(void)awakeFromNib{
     [super awakeFromNib];
     self.isChecked = YES;
 //
+    [self.layer setBorderColor:UIColor.blueColor.CGColor];
     [self addTarget:self action:@selector(checkAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.layer setBorderColor:UIColor.lightGrayColor.CGColor];
+    [self.layer setBorderColor:self.borderColor.CGColor];
     [self.layer setCornerRadius:4];
     [self.layer setBorderWidth:2];
-    img = [UIImage imageNamed:@"ic_check"];
-    UIImage *image = [img imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    [self setImage:image forState:UIControlStateNormal];
-    self.tintColor = [UIColor whiteColor];
+    [self.layer setMasksToBounds:true];
+    [self setClipsToBounds:true];
+
     [self setBackgroundColor:UIColor.whiteColor];
 }
 
 -(void)checkAction:(UIButton *)sender{
     self.isChecked = !self.isChecked;
     if(self.isChecked){
-      [self setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+
+        [self setCheckSymbol:UIColor.clearColor];
         [self.layer setBorderWidth:2];
         [self setBackgroundColor:UIColor.whiteColor];
     }else{
-        [self setBackgroundColor:UIColor.blueColor];
-        [self setImage:img forState:UIControlStateNormal];
+        [self setBackgroundColor:self.checkedColor];
+
+        [self setCheckSymbol:UIColor.whiteColor];
         [self.layer setBorderWidth:0];
         
     }
     
+}
+
+-(void)setCheckSymbol:(UIColor*) checkColor{
+    contextX = UIGraphicsGetCurrentContext();
+    contextY = UIGraphicsGetCurrentContext();
+    CGContextSetStrokeColorWithColor(contextX, checkColor.CGColor);
     
+    // Draw them with a 2.0 stroke width so they are a bit more visible.
+    CGContextSetLineWidth(contextX, 2.0f);
+    
+    CGContextMoveToPoint(contextX, 8.0f, 12.0f); //start at this point
+    CGFloat centerX = (self.bounds.size.width / 2) -2;
+    CGFloat centerY = (self.bounds.size.height / 2) + 5;
+    CGContextAddLineToPoint(contextX, centerX  , centerY); //draw to this point
+    
+    
+    CGContextSetStrokeColorWithColor(contextY, checkColor.CGColor);
+    
+    // Draw them with a 2.0 stroke width so they are a bit more visible.
+    CGContextSetLineWidth(contextY, 2.0f);
+    
+    CGContextMoveToPoint(contextY, centerX, centerY); //start at this point
+    
+    CGContextAddLineToPoint(contextY, self.bounds.size.width-5  , 8); //draw to this point
+    
+    // and now draw the Path!
+    CGContextStrokePath(contextX);
+    CGContextStrokePath(contextY);
 }
 @end
