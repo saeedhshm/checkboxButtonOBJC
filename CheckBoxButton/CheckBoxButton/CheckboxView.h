@@ -11,7 +11,7 @@
 @interface CheckboxView : UIView
 @property (nonatomic,strong)IBInspectable UIColor *arrowColor;
 @property (nonatomic,strong)IBInspectable UIColor *borderColor;
-@property (nonatomic,strong)IBInspectable UIColor *bgColor;
+@property (nonatomic,strong)IBInspectable UIColor *bgCheckedColor;
 @property (nonatomic,strong)IBInspectable UIColor *bgUncheckedColor;
 @property (nonatomic) BOOL isChecked;
 @end

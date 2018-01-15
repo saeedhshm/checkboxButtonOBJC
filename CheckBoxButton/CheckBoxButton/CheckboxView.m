@@ -28,7 +28,7 @@
         [self setBackgroundColor:[UIColor clearColor]];
         self.borderColor = [UIColor lightGrayColor];
         self.arrowColor = [UIColor whiteColor];
-        self.bgColor = [UIColor blueColor];
+        self.bgCheckedColor = [UIColor blueColor];
         
     }
     return self;
@@ -50,7 +50,7 @@
     [self.layer setBorderWidth:2];
     [self.layer setMasksToBounds:true];
     [self setClipsToBounds:true];
-    [arr setBackgroundColor:self.bgColor];
+    [arr setBackgroundColor:self.bgCheckedColor];
     button = [[UIButton alloc] initWithFrame:self.bounds];
     [button addTarget:self action:@selector(addCheckAction:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:button];
