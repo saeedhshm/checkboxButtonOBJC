@@ -18,36 +18,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAH-B5-bng" customClass="CheckboxButton">
-                                <rect key="frame" x="172" y="318" width="30" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xwr-nd-ank" customClass="CheckboxView">
+                                <rect key="frame" x="172" y="366" width="30" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="3YN-gA-ffr"/>
-                                    <constraint firstAttribute="height" constant="30" id="6RE-51-Lsl"/>
+                                    <constraint firstAttribute="width" constant="30" id="ALg-ZV-DHw"/>
+                                    <constraint firstAttribute="height" constant="30" id="a5j-vB-9dG"/>
                                 </constraints>
-                                <color key="tintColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="checkedColor">
-                                        <color key="value" red="0.0045357230120000001" green="0.6514617801" blue="0.3200606406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVp-aq-ZuM">
+                                <rect key="frame" x="164" y="617" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="checkAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Poi-2Z-o1K"/>
+                                    <action selector="checkTheCheck:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PpO-t0-q1d"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="OAH-B5-bng" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4tR-Yl-bSD"/>
-                            <constraint firstItem="OAH-B5-bng" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iAI-W6-acU"/>
+                            <constraint firstItem="Xwr-nd-ank" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tzi-nn-CM7"/>
+                            <constraint firstItem="Xwr-nd-ank" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="346" id="b3y-hq-U7X"/>
+                            <constraint firstAttribute="bottom" secondItem="mVp-aq-ZuM" secondAttribute="bottom" constant="20" symbolic="YES" id="vY6-La-cZ3"/>
+                            <constraint firstItem="mVp-aq-ZuM" firstAttribute="centerX" secondItem="Xwr-nd-ank" secondAttribute="centerX" id="z8v-fS-Up1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="checkBox" destination="Xwr-nd-ank" id="k9c-4p-euV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "CheckboxButton.h"
+
+#import "CheckboxView.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet CheckboxView *checkBox;
 
 @end
 
@@ -20,13 +22,14 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)checkTheCheck:(id)sender {
+    
+    NSLog(@"chekbox is %i",self.checkBox.isChecked);
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-- (IBAction)checkAction:(CheckboxButton *)sender {
-    NSLog(@"the button is checked %i",sender.isChecked);
 }
 
 
