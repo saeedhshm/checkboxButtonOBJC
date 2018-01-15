@@ -25,7 +25,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-//        [self setBackgroundColor:[UIColor clearColor]];
+        [self setBackgroundColor:[UIColor clearColor]];
         self.borderColor = [UIColor lightGrayColor];
         self.arrowColor = [UIColor whiteColor];
         self.bgColor = [UIColor blueColor];
@@ -37,6 +37,7 @@
 
 -(void)awakeFromNib{
     [super awakeFromNib];
+    [self setBackgroundColor:self.bgUncheckedColor];
     
 //    [self setBackgroundColor:[UIColor redColor]];
     CGRect rect = CGRectMake(3, 3, self.bounds.size.width - 6, self.bounds.size.height - 6);
